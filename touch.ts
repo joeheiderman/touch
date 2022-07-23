@@ -63,7 +63,8 @@ namespace makerbit {
    * Initialize the touch controller.
    */
   //% subcategory="Touch"
-  //% blockId="makerbit_touch_init" block="initialize touch"
+  //% blockId="makerbit_touch_init" 
+  //% block="initialize touch"
   //% weight=70
   function initTouchController(): void {
     if (!!touchState) {
