@@ -66,7 +66,7 @@ namespace makerbit {
   //% blockId="makerbit_touch_init" 
   //% block="initialize touch"
   //% weight=70
-  function initTouchController(): void {
+  export function initTouchController(): void {
     if (!!touchState) {
       return;
     }
