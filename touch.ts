@@ -71,6 +71,7 @@ namespace makerbit {
     if (!!touchState) {
       return;
     }
+    serial.writeLine(`initTouchController`);
 
     touchState = {
       touchStatus: 0,
@@ -192,9 +193,11 @@ namespace makerbit {
   ) {
     initTouchController();
     if (action === TouchAction.Touched) {
+      serial.writeLine (`onTouch - touched ${sensor}`);
       touchState.onTouched.push(new TouchHandler(sensor, handler));
     }
     else {
+      serial.writeLine (`onTouch - released ${sensor}`);
       touchState.onReleased.push(new TouchHandler(sensor, handler));
     }
   }
